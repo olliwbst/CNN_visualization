@@ -1,11 +1,15 @@
 # CNN_visualization
 Implementation to visualize the internal representation of images inside convolutional neural networks as part of my bachelors thesis. The goal was a framework that could handle all steps from dataset (raw images) to interpretable visualisations: pre-processiong, training and visualization.
 I worked with Keras with TensorFlow backend using available visualization solutions for that part and combined everything to a working test-environment.
+For performance reasons it was developed with Google Colab but is designed in a way so that every 'Block' inside the notebook works as an independent .py-script on a local machine as well (given all the dependencies are installed as well).
 In the current state it's a working prototype that might be improved or extended in the future.
 
-Some examples of what the output looks like. Note that there are always two outputs, one for each used vis-library
+Some examples of what the output looks like. Note that there are always two outputs, one for each used vis-library:
+
 keras-vis (https://github.com/raghakot/keras-vis) and
+
 iNNvestigate (https://github.com/albermax/innvestigate)
+
 the output for innvestigate is always the same as only the class with the highest score is shown but vis is different depending on how many classes we are dealing with as this library can visualize results per class.
 
 artificial data from the thesis:
@@ -32,3 +36,5 @@ and an example of it tackling the mnist dataset of handwritten digits to see the
 
 ![Alt text](images/1_vis.png?raw=true "example of mnist dataset, vis library")
 ![Alt text](images/1_innvestigate.png?raw=true "example of mnist dataset, innvestigate library")
+
+as you can see, the model couldn't predict the upper examples correctly, they were chosen to offer a better base to discuss factors influencing that result in the thesis and were very rare (the model had an accuracy of >95% with all datasets it was tested with)
